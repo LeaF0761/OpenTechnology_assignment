@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int strncmp(const char *s1, const char *s2, size_t n) {
+    const char *temp1 = s1;
+    
+    const char *temp2 = s2;
+    int count = 0;
+    while (*temp1)
+    {
+        if (count >= n) break;
+        if (*temp1 != *temp2) return *temp1 - *temp2;
+        temp1++;
+        temp2++;
+        count++;
+    }
+    return 0;
+}
+
+int main() {
+    char str[128] = "ABC";
+    char str2[128] = "ABD";
+    int result = strncmp(str, str2, 2);
+    printf("result: %d\n", result);
+    return 0;
+}
