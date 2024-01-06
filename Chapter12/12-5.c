@@ -1,5 +1,4 @@
 //自動車の移動
-
 #include <math.h>
 #include <stdio.h>
 
